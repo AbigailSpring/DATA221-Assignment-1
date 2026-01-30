@@ -1,12 +1,12 @@
-def analyze_length_and_parity_of_the_string(string_list):
-    string_details = {}
-    for current_string in string_list:
-        string_length = len(current_string)
-        string_parity = "even" if string_length % 2 == 0 else "odd"
-        string_details[current_string] = {
-            "length": string_length,
-            "parity": string_parity
+def build_string_length_and_parity_dictionary(list_of_words):
+    string_to_properties_map = {}
+    for word in list_of_words:
+        length_of_word = len(word)
+        parity_of_length = "even" if length_of_word % 2 == 0 else "odd"
+        string_to_properties_map[word] = {
+            "length": length_of_word,
+            "parity": parity_of_length
         }
-    return string_details
-expected_output_words = ["Data", "Science"]
-print(analyze_length_and_parity_of_the_string(expected_output_words))
+    return string_to_properties_map
+input_words = ["Data", "Science"]
+print(build_string_length_and_parity_dictionary(input_words))

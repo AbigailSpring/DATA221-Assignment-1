@@ -11,10 +11,8 @@ def seconds_since_midnight_to_current_time(seconds_since_midnight):
         period = "PM"
     else:
         period = "AM"
-
     hours = total_hours % 12
     if hours == 0:
         hours = 12
-
     return f"{hours} {minutes} {seconds} {period}"
 print(seconds_since_midnight_to_current_time(19067))
